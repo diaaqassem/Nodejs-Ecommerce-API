@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nodejs.org/en/" target="blank"><img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" width="200" alt="Node.js Logo" /></a>
+  <a href="https://nodejs.org/en/" target="blank"><img src="https://th.bing.com/th/id/R.d42672d4d185739d26257ed5c653c740?rik=dvh0VB%2fEWz20hQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fnodejs-logo-png-nice-images-collection-node-js-desktop-wallpapers-370.png&ehk=bMmyN3n62enzXql6L4A5EzHc90tJxK%2bKcr6GMACTfRk%3d&risl=&pid=ImgRaw&r=0" width="200" alt="Node.js Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nodejs/node/master?token=abc123def456
