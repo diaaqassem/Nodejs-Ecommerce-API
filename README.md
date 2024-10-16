@@ -90,13 +90,11 @@ PORT = 3000
 NODE_ENV =''
 
 #database
-DB_NAME = nodejs-ecommerce-API-v1
-DB_USER = username
-DB_PASSWORD = yourpassword
-DB_URI = "databaseuri"
-BASE_URL = "http://localhost:3000/"
-
-#mongodb://localhost:27017
+- DB_NAME = nodejs-ecommerce-API-v1
+- DB_USER = username
+- DB_PASSWORD = yourpassword
+- DB_URI = "databaseuri"
+- BASE_URL = "http://localhost:3000/"
 
 #jwt
 JWT_SECRET = "7f1b3eaf92c3a6d7e8b2d0fa9c4e3f8b"
