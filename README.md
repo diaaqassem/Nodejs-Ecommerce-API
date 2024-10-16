@@ -85,6 +85,32 @@ This is a comprehensive E-Commerce API built using Node.js and Express. It suppo
    git clone https://github.com/diaaqassem/Nodejs-Ecommerce-API.git
    cd Nodejs-Ecommerce-API
 
+## create .env file
+PORT = 3000
+NODE_ENV =''
+
+#database
+DB_NAME = nodejs-ecommerce-API-v1
+DB_USER = username
+DB_PASSWORD = yourpassword
+DB_URI = "databaseuri"
+BASE_URL = "http://localhost:3000/"
+
+#mongodb://localhost:27017
+
+#jwt
+JWT_SECRET = "7f1b3eaf92c3a6d7e8b2d0fa9c4e3f8b"
+JWT_EXPIRES_IN = "90d"
+
+#email nodemailer
+EMAIL_HOST= 'youremail@hotmail.com'
+EMAIL_PASSWORD="yourpassword"
+EMAIL_PORT=587
+EMAIL_USE_TLS=T
+
+# stripe settings
+STRIPE_SECRET_KEY = 
+
 2.Install dependencies:
   npm install
 
