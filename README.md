@@ -97,17 +97,17 @@ NODE_ENV =''
 - BASE_URL = "http://localhost:3000/"
 
 #jwt
-JWT_SECRET = "7f1b3eaf92c3a6d7e8b2d0fa9c4e3f8b"
-JWT_EXPIRES_IN = "90d"
+- JWT_SECRET = ""
+- JWT_EXPIRES_IN = "7d"
 
 #email nodemailer
-EMAIL_HOST= 'youremail@hotmail.com'
-EMAIL_PASSWORD="yourpassword"
-EMAIL_PORT=587
-EMAIL_USE_TLS=T
+- EMAIL_HOST= 'youremail@hotmail.com'
+- EMAIL_PASSWORD="yourpassword"
+- EMAIL_PORT=587
+- EMAIL_USE_TLS=T
 
 # stripe settings
-STRIPE_SECRET_KEY = 
+- STRIPE_SECRET_KEY = 
 
 2.Install dependencies:
   npm install
