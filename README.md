@@ -144,3 +144,16 @@ NODE_ENV =''
 3.Start the development server:
   npm run start:dev
 
+#Run API Using Docker 
+---
+
+# Jenkins Plugin (npm, docker pipeline, slack notification)
+
+- Docker:
+
+   ```bash
+   docker run -e PORT=5000 -e DB_URI=your_mongodb_connection_string -e DB_NAME="ecommerce-api-v1" -e EMAIL_HOST='youremail@hotmail.com' -e EMAIL_PASSWORD="yourpassword" -e EMAIL_PORT=587 -e EMAIL_USE_TLS=T -e JWT_EXPIRES_IN="7d" -e JWT_SECRET="" -e STRIPE_SECRET_KEY="" -p 5000:5000 diaaqassem1/ecommerce-api:1.0
+
+   ```
+
+---
