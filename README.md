@@ -113,7 +113,7 @@ This is a comprehensive E-Commerce API built using Node.js and Express. It suppo
    ```bash
    git clone https://github.com/diaaqassem/Nodejs-Ecommerce-API.git
    cd Nodejs-Ecommerce-API
-
+---
 ## create .env file
 PORT = 3000
 NODE_ENV =''
@@ -137,7 +137,7 @@ NODE_ENV =''
 
 # stripe settings
 - STRIPE_SECRET_KEY = 
-
+---
 2.Install dependencies:
   npm install
 
