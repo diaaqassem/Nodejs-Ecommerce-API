@@ -2125,11 +2125,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{ecommerce}}api/users/getMe",
+							"raw": "{{ecommerce}}/api/users/getMe",
 							"host": [
-								"{{ecommerce}}api"
+								"{{ecommerce}}"
 							],
 							"path": [
+								"api",
 								"users",
 								"getMe"
 							]
