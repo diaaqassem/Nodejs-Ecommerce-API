@@ -71,6 +71,35 @@ This is a comprehensive E-Commerce API built using Node.js and Express. It suppo
 - uuid: Generates unique IDs for resources and transactions.
 - xss-clean: Sanitizes user input to prevent XSS (Cross-Site Scripting) attacks.
 
+
+##  API Endpoints Overview
+
+| Resource      | Endpoint                                | Method | Description                  |
+|---------------|------------------------------------------|--------|------------------------------|
+| Auth          | `/signup`, `/login`, `/resetPassword`   | POST   | User authentication routes   |
+| Products      | `/products`, `/products/:id`             | GET/POST/PUT/DELETE | Manage products |
+| Categories    | `/categories`, `/categories/:id`         | GET/POST/PUT/DELETE | Manage categories |
+| SubCategories | `/categories/:catId/subCategories`       | GET/POST | Nested subcategories         |
+| Brands        | `/brands`, `/brands/:id`                 | GET/POST/PUT/DELETE | Manage brands     |
+| Cart          | `/cart`, `/cart/:id`, `/cart/applyCoupon`| GET/POST/PUT/DELETE | Manage cart items |
+| Wishlist      | `/wishlist`, `/wishlist/:id`             | GET/POST/DELETE | Manage wishlist     |
+| Orders        | `/orders`, `/orders/:id`                 | GET/POST/PUT | Manage user orders    |
+| Reviews       | `/reviews`, `/reviews/:id`               | GET/POST/PUT/DELETE | Product reviews    |
+| Coupons       | `/coupons`, `/coupons/:id`               | GET/POST/PUT/DELETE | Manage coupons     |
+| Users         | `/users`, `/users/:id`, `/getMe`         | GET/PUT/DELETE | Admin/user operations |
+
+---
+
+##  Roles
+
+| Role     | Access Rights                           |
+|----------|------------------------------------------|
+| `admin`  | Full control                             |
+| `manager`| Can manage products, orders, categories  |
+| `user`   | Can manage own profile, cart, orders     |
+
+
+
 ## Getting Started
 
 ### Prerequisites
