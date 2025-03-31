@@ -8,6 +8,7 @@ pipeline{
     }
     tools{
         nodejs "Nodejs"
+        docker "Docker"
     }
     environment{
 		PORT = 5000
@@ -23,6 +24,9 @@ pipeline{
 		EMAIL_PASSWORD= "qQ3XzKAMwHFGTeQyc1"
 		EMAIL_PORT= 587
 		EMAIL_USE_TLS= "T"
+	    
+      		DOCKER_CREDENTIALS="docker-hub-credentials"
+        	DOCKER_IMAGE="diaaqassem1/ecommerce"
     }
     stages{
         stage("Fetch Code from VCS"){
