@@ -13,9 +13,7 @@ pipeline{
     environment{
 		PORT = 5000
 		
-		DB_NAME = nodejs-ecommerce-API-v1
-		DB_USER = Diaa_Qassem
-		DB_PASSWORD = root123diaa
+		DB_NAME = "nodejs-ecommerce-API-v1"
 		DB_URI = "mongodb://172.17.0.3/?directConnection=true"
 		BASE_URL = "http://localhost:5000/"
 		
@@ -23,9 +21,9 @@ pipeline{
 		JWT_EXPIRES_IN = 3600
 		
 		EMAIL_HOST= 'jorge.runte@ethereal.email'
-		EMAIL_PASSWORD="qQ3XzKAMwHFGTeQyc1"
-		EMAIL_PORT=587
-		EMAIL_USE_TLS=T
+		EMAIL_PASSWORD= "qQ3XzKAMwHFGTeQyc1"
+		EMAIL_PORT= 587
+		EMAIL_USE_TLS= "T"
     }
     stages{
         stage("Fetch Code from VCS"){
