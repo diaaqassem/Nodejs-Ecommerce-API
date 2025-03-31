@@ -1,0 +1,2862 @@
+{
+	"info": {
+		"_postman_id": "3c085435-8a3a-47a8-8a49-1f308e27554a",
+		"name": "nodejs ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31212171"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "newCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iphone2",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Diaa Qassem/Pictures/Camera Roll/MRV_20240114_00_06_59.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategories ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/65d3bd51d664c575e3f06ea2",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								"65d3bd51d664c575e3f06ea2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategories ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "updated file",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eeb5c66-00d9-4900-95fd-1056e0f49fcb"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/65e66b36c61982a9d8635818",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								"65e66b36c61982a9d8635818"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCategory ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/65d3bde5020690303714db6f",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								"65d3bde5020690303714db6f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subCategory",
+			"item": [
+				{
+					"name": "create subCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sort",
+								"value": "category ",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "keywords",
+								"value": "category",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/subCategories/?sort=category&page=2&limit=10",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"subCategories",
+								""
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "category"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubCategories ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/65d3bd51d664c575e3f06ea2",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								"65d3bd51d664c575e3f06ea2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSubCategories ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and cs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/65d3bd51d664c575e3f06ea2",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								"65d3bd51d664c575e3f06ea2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCategory ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/subCategories/65d905969f2c13fb9e3b674d",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"subCategories",
+								"65d905969f2c13fb9e3b674d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories/sub",
+			"item": [
+				{
+					"name": "list sub from cat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/categories/65d3db65f201d2705974bd65/subCategories",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								"65d3db65f201d2705974bd65",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create subCategory on category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"android\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/65d3db65f201d2705974bd65/subCategories",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								"65d3db65f201d2705974bd65",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brands",
+			"item": [
+				{
+					"name": "newBrand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBrands",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/brands/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"brands",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBrands ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/brands/65d928f983667be4144017d7",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"brands",
+								"65d928f983667be4144017d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBrands ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and cs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/65d3bd51d664c575e3f06ea2",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								"65d3bd51d664c575e3f06ea2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeBrand ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/brands/65d3bde5020690303714db6f",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"brands",
+								"65d3bde5020690303714db6f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coupons",
+			"item": [
+				{
+					"name": "new coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dfdfjdjfdcdrtkddngnnj\",\r\n    \"expire\":\"2044-10-30\",\r\n    \"discount\":234\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/coupons/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"coupons",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get coupons",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/coupons/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"coupons",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific coupon",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/coupons/65f655ae413ed049173ff29d",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"coupons",
+								"65f655ae413ed049173ff29d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update specific coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and cs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/coupons/65f655ae413ed049173ff29d",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"coupons",
+								"65f655ae413ed049173ff29d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove specifi coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/coupons/65f655ae413ed049173ff29d",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"coupons",
+								"65f655ae413ed049173ff29d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+				{
+					"name": "newreview",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"phone and computer user2\",\r\n    \"ratings\":2.54,\r\n    \"user\":\"65f42bf0e30d462f9771c133\",\r\n    \"product\":\"65da0bccf422706973ab4cb2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/reviews/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/reviews/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReviews ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/reviews/65f5aad91eaa9e28e8ea40c0",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"reviews",
+								"65f5aad91eaa9e28e8ea40c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateReviews ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"phone\",\r\n    \"ratings\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/reviews/65f5a630e6384aacdf655d83",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"reviews",
+								"65f5a630e6384aacdf655d83"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeReview ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/reviews/65f5b2cd17a8eb0d4edf0d7d",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"reviews",
+								"65f5b2cd17a8eb0d4edf0d7d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "newProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "laptop",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "good",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "34",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "postman-cloud:///1eeb5cdf-b3fc-4e50-86e5-d321092ff8a4"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "postman-cloud:///1eeb5c66-00d9-4900-95fd-1056e0f49fcb"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "postman-cloud:///1eeb5cdf-b3fc-4e50-86e5-d321092ff8a4"
+								},
+								{
+									"key": "imageCover",
+									"type": "file",
+									"src": "postman-cloud:///1eeb5cdf-b3fc-4e50-86e5-d321092ff8a4"
+								},
+								{
+									"key": "price",
+									"value": "3435",
+									"type": "text"
+								},
+								{
+									"key": "sold",
+									"value": "535",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "65d3bd51d664c575e3f06ea2",
+									"type": "text"
+								},
+								{
+									"key": "subCategory",
+									"value": "65d8e9fa60913ce22164cd22",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "65d9298ffdbab4eef820689c",
+									"type": "text"
+								},
+								{
+									"key": "ratingsAverage",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "subcategory ",
+									"value": "65d8ec087a143c77bbf6262b",
+									"type": "text"
+								},
+								{
+									"key": "colors",
+									"value": "red",
+									"type": "text"
+								},
+								{
+									"key": "colors",
+									"value": "blue",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/products/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/products/?limit=1&price[gte]=695",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "price[gte]",
+									"value": "695"
+								},
+								{
+									"key": "ratingsAverage[gte]",
+									"value": "4.4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/products/65e982242e76ae4cbad71ff5",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"products",
+								"65e982242e76ae4cbad71ff5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProducts ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/products/65e982242e76ae4cbad71ff5",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"products",
+								"65e982242e76ae4cbad71ff5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeProducts ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/65d3bde5020690303714db6f",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								"65d3bde5020690303714db6f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"user3\",\r\n    \"email\":\"user33@gmail.com\",\r\n    \"password\":\"diaaD133@\",\r\n    \"passwordConfirm\":\"diaaD133@\",\r\n    \"phone\":\"01027188682\",\r\n    \"role\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/auth/signup",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"auth",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZWFlMmIxMzFlMjFjMDczN2Q2NWIyYyIsImlhdCI6MTcwOTkwMzg0NCwiZXhwIjoxNzE3Njc5ODQ0fQ.bHMUSnDB-_tc6-ar-oaMtECMGq0o7ywoMyffTz-YiG8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"email\":\"user33@gmail.com\",\r\n    \"password\":\"diaaD133@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/auth/login",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"elshabahelmontaqem@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/auth/forgotPassword/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"auth",
+								"forgotPassword",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify reset password code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resetCode\":\"947459\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/auth/verifyResetCode",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"auth",
+								"verifyResetCode"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"elshabahelmontaqem@gmail.com\",\r\n    \"password\":\"diaa123 #\",\r\n    \"confirmPassword\":\"diaa123 #\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/auth/resetPassword",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"auth",
+								"resetPassword"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/categories/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeUser ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/brands/65d3bde5020690303714db6f",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"brands",
+								"65d3bde5020690303714db6f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users (Admin)",
+			"item": [
+				{
+					"name": "newUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "profileImg",
+									"type": "file",
+									"src": "postman-cloud:///1eeb5cdf-b3fc-4e50-86e5-d321092ff8a4"
+								},
+								{
+									"key": "phone",
+									"value": "01027188682",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "diaaqassem2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "diaaqayman",
+									"type": "text"
+								},
+								{
+									"key": "profileImg",
+									"type": "file",
+									"src": "postman-cloud:///1eeb5cdf-b3fc-4e50-86e5-d321092ff8a4"
+								},
+								{
+									"key": "phone",
+									"value": "01027188682",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "diaaqassem2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "diaaqayman",
+									"type": "text"
+								},
+								{
+									"key": "profileImg",
+									"type": "file",
+									"src": "postman-cloud:///1eeb5cdf-b3fc-4e50-86e5-d321092ff8a4"
+								},
+								{
+									"key": "phone",
+									"value": "01027188682",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/65d928f983667be4144017d7",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								"65d928f983667be4144017d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeUser ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/65d3bde5020690303714db6f",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								"65d3bde5020690303714db6f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "logged user",
+			"item": [
+				{
+					"name": "updateMe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "zinab",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "diaaqassem2@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaqayman",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"type": "file",
+									"src": "postman-cloud:///1eee12e0-ba96-44a0-825a-c5114b69ba9a"
+								},
+								{
+									"key": "phone",
+									"value": "01027188682",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/updateMe",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								"updateMe"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete logger user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/deleteMe",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								"deleteMe"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changeMyPassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"zinab\",\r\n    \"currentPassword\":\"diaaD133@\",\r\n    \"password\":\"MyP@ssw0rd123\",\r\n    \"passwordConfirm\":\"MyP@ssw0rd123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/changeMyPassword",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								"changeMyPassword"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "diaa",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "01027218868",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "qassemdiaa@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "diaaayman",
+									"disabled": true
+								},
+								{
+									"key": "profileImg",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"phone and computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/users/getMe",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"users",
+								"getMe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product/reviews",
+			"item": [
+				{
+					"name": "get all reviews specific product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/products/65da0bccf422706973ab4cb2/reviews",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"products",
+								"65da0bccf422706973ab4cb2",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"phone and computer user2\",\r\n    \"ratings\":2.54,\r\n    \"user\":\"65f43ab31348427589004e90\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/products/65d9f8acdff76835758b1ac2/reviews",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"products",
+								"65d9f8acdff76835758b1ac2",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific review on specific product Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/products/65f447e6e16134610ed783fd/reviews/65f50e63c12cda3819fb4da2",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"products",
+								"65f447e6e16134610ed783fd",
+								"reviews",
+								"65f50e63c12cda3819fb4da2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wish list",
+			"item": [
+				{
+					"name": "add to wish list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"65d9f4a42091f264ff76db4e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/wishList/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"wishList",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get wish list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/wishList/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"wishList",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove from wish list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/wishList/65d9f4a42091f264ff76db4e",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"wishList",
+								"65d9f4a42091f264ff76db4e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "addresses",
+			"item": [
+				{
+					"name": "add address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"alias\":\"home\",\r\n    \"details\":\"cairo - elkomAltawil\",\r\n    \"city\":\"kafral-shaikh\",\r\n    \"phone\":\"01027188682\",\r\n    \"postalCode\":\"67890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/addresses/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"addresses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get addresses form logged user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/addresses/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"addresses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/wishList/65f5b2cd17a8eb0d4edf0d7d",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"wishList",
+								"65f5b2cd17a8eb0d4edf0d7d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "add to cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"65e982242e76ae4cbad71ff5\",\r\n    \"color\":\"blue\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/cart/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cart items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/cart/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove from cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/cart/65f6abb59e95107470c70a14",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"cart",
+								"65f6abb59e95107470c70a14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clear all cart items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/cart/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update cart quantiry",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\":67\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/cart/65f6ac089e95107470c70a52",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"cart",
+								"65f6ac089e95107470c70a52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "apply coupon to cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"dfdfjdjfdkdngnnj\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/cart/applyCoupon",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"cart",
+								"applyCoupon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"shippingAddress\": {\r\n      \"details\": \"cairo street 6OC\",\r\n      \"phone\": \"01027188682\",\r\n      \"city\": \"mansoura\",\r\n      \"postalCode\": \"ijwihdhih\",\r\n      \"alias\": \"String\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/orders",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"shippingAddress\": {\r\n      \"details\": \"cairo street 6OC\",\r\n      \"phone\": \"01027188682\",\r\n      \"city\": \"mansoura\",\r\n      \"postalCode\": \"ijwihdhih\",\r\n      \"alias\": \"String\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/orders/65fde39fef088e711493e1a8",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"orders",
+								"65fde39fef088e711493e1a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get orders for logged user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"shippingAddress\": {\r\n      \"details\": \"cairo street 6OC\",\r\n      \"phone\": \"01027188682\",\r\n      \"city\": \"mansoura\",\r\n      \"postalCode\": \"ijwihdhih\",\r\n      \"alias\": \"String\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/orders/",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update paid (admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/orders/65fde39fef088e711493e1a8/paid",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"orders",
+								"65fde39fef088e711493e1a8",
+								"paid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dlete order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/orders/65fde39fef088e711493e1a8/canceled",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"orders",
+								"65fde39fef088e711493e1a8",
+								"canceled"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update delivered (admin,manager)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{ecommerce}}api/orders/65fde39fef088e711493e1a8/delivered",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"orders",
+								"65fde39fef088e711493e1a8",
+								"delivered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get check out session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"shippingAddress\": {\r\n      \"details\": \"cairo street 6OC\",\r\n      \"phone\": \"01027188682\",\r\n      \"city\": \"mansoura\",\r\n      \"postalCode\": \"ijwihdhih\",\r\n      \"alias\": \"String\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ecommerce}}api/orders/checkout-session",
+							"host": [
+								"{{ecommerce}}api"
+							],
+							"path": [
+								"orders",
+								"checkout-session"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "ecommerce",
+			"value": " http://localhost:3000/"
+		}
+	]
+}
