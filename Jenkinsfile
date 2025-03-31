@@ -8,7 +8,6 @@ pipeline{
     }
     tools{
         nodejs "Nodejs"
-        docker "Docker"
     }
     environment{
 		PORT = 5000
