@@ -28,7 +28,7 @@ pipeline{
         stage("Fetch Code from VCS"){
             steps{
                 echo "======== Fetching ========"
-                git url: "https://github.com/diaaqassem/Article-Management-API.git", branch: "main"
+                git url: "https://github.com/diaaqassem/Nodejs-Ecommerce-API.git", branch: "main"
             }
             post{
                 success{
