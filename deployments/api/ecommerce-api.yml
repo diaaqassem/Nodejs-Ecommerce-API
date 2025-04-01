@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecommerce-api
+  template:
+    metadata:
+      labels:
+        app: ecommerce-api
+    spec:
+      containers:
+        - name: ecommerce-container
+          image: diaaqassem1/ecommerce-api:1.0
+          ports:
+            - containerPort: 6000
+            - containerPort: 6001
+          env:
+            - name: DB_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: DB_URI
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: DB_NAME
+            - name: EMAIL_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: EMAIL_HOST
+            - name: EMAIL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: EMAIL_PASSWORD
+            - name: EMAIL_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: EMAIL_PORT
+            - name: EMAIL_USE_TLS
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: EMAIL_USE_TLS
+            - name: JWT_EXPIRES_IN
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: JWT_EXPIRES_IN
+            - name: JWT_SECRET
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: JWT_SECRET
+            - name: STRIPE_SECRET_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: STRIPE_SECRET_KEY
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: env-ecommerce
+                  key: PORT
